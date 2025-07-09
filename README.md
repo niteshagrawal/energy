@@ -1,3 +1,5 @@
+"ALL THE KEYS AND SECRETS WILL BE DELETED IN 7 DAYS" 
+
 # Energy Projects App
 
 ## Overview

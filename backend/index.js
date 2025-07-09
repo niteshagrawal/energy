@@ -23,16 +23,13 @@ app.get("/projects", async (req, res) => {
     `per_page=${limit}`,
   ];
 
-  let url = `https://developer.nrel.gov/api/pv-projects/data_query/v1.json?${apiParams.join(
+  let url = `https://developer.nrel.gov/api/solar/data_query/v1.json?${apiParams.join(
     "&"
   )}`;
 
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log("🚀 ~ index.js:28 ~ app.get ~ data:", data);
-
-    // Transform data as needed
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch projects" });
